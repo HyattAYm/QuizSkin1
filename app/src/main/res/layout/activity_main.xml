@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:context="com.example.alessandra.quizshow.MainActivity">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What skin type do you think you have?"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dry"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oily or combination"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mature"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer these simple questions to find out your skin type!"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1) In the morning my skin looks..." />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:onClick="addFourToScore"
+                android:id="@+id/radio_button_1a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shiny" />
+
+            <RadioButton
+                android:onClick="addTwoToScore"
+                android:id="@+id/radio_button_1b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dry"/>
+
+            <RadioButton
+                android:onClick="addThreeToScore"
+                android:id="@+id/radio_button_1c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wrinkly"/>
+
+            <RadioButton
+                android:onClick="addZeroToScore"
+                android:id="@+id/radio_button_1d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quite good"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2) When I look my skin in the mirror, what bothers me is..."/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:onClick="addZeroToScore"
+                android:id="@+id/radio_button_2a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nothing (most of the times)"/>
+
+            <RadioButton
+                android:onClick="addThreeToScore"
+                android:id="@+id/radio_button_2b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fine lines, dark spots, redness..."/>
+
+            <RadioButton
+                android:onClick="addFourToScore"
+                android:id="@+id/radio_button_2c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blackheads, shine, acne..."/>
+
+            <RadioButton
+                android:onClick="addTwoToScore"
+                android:id="@+id/radio_button_2d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dryness, lack of tone..."/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3) When I buy skincare products, I go for something that... "/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:onClick="addTwoToScore"
+                android:id="@+id/radio_button_3a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hydrate and moisturize my skin"/>
+
+            <RadioButton
+                android:onClick="addFourToScore"
+                android:id="@+id/radio_button_3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reduces shine, pores, makes skin even"/>
+
+            <RadioButton
+                android:onClick="addZeroToScore"
+                android:id="@+id/radio_button_3c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enhances my skin features"/>
+
+            <RadioButton
+                android:onClick="addThreeToScore"
+                android:id="@+id/radio_button_3d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reduces fine lines, makes skin look younger"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4) When I buy makeup products, I look for... "/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:onClick="addThreeToScore"
+                android:id="@+id/radio_button_4a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age rewind, replenishing products!"/>
+
+            <RadioButton
+                android:onClick="addTwoToScore"
+                android:id="@+id/radio_button_4b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Glow, glow, glow!!!"/>
+
+            <RadioButton
+                android:onClick="addZeroToScore"
+                android:id="@+id/radio_button_4c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eye or lip products, my complexion is ok!"/>
+
+            <RadioButton
+                android:onClick="addFourToScore"
+                android:id="@+id/radio_button_4d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High coverage, mattifying!"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:id="@+id/finalScore"/>
+
+        <Button
+            android:id="@+id/findOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="findOut"
+            android:text="Find out!"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
